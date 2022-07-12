@@ -1,27 +1,30 @@
 package partea;
 
-public class Professores extends FuncionarioUniversidade{
+import java.util.List;
+
+public class Professor extends Funcionario {
      private String nivelDeGraduacao;
 private String disciplinaMinistrada;
 private int quantidadeDeAlunos;
 private int quantidadeDeturmas;
-private Turma turma;
+private List <Turma> turmas;
 
 
-    public Professores(String nome, String cpf, String numeroDeRegistro, String orgaoDeLotacao, double salario, String nivelDeGraduacao, String disciplinaMinistrada, int quantidadeDeAlunos, Turma quantidadeDeturmas) {
+    public Professor(String nome, String cpf, String numeroDeRegistro, String orgaoDeLotacao, double salario, String nivelDeGraduacao, String disciplinaMinistrada, List<Turma> turmas) {
         super(nome, cpf, numeroDeRegistro, orgaoDeLotacao, salario);
         this.nivelDeGraduacao = nivelDeGraduacao;
         this.disciplinaMinistrada = disciplinaMinistrada;
-        this.quantidadeDeAlunos = quantidadeDeAlunos;
-        this.quantidadeDeturmas = quantidadeDeturmas;
-        this.turma = turma;
+        this.quantidadeDeAlunos = calcularQuantidadeDeAlunos(turmas);
+        this.quantidadeDeturmas = calcularQuantidadeDeTurmas(turmas);
+        this.turmas = turmas;
     }
 
     public String getNivelDeGraduacao() {
         return nivelDeGraduacao;
     }
 
-    public void setNivelDeGraduacao(String nivelDeGraduacao) {
+    public void setNivelDeGraduacao(String nivelDeGraduacao){
+
         this.nivelDeGraduacao = nivelDeGraduacao;
     }
 
@@ -37,7 +40,8 @@ private Turma turma;
         return quantidadeDeAlunos;
     }
 
-    public void setQuantidadeDeAlunos(int quantidadeDeAlunos) {
+    public void setQuantidadeDeAlunos(int quantidadeDeAlunos){
+
         this.quantidadeDeAlunos = quantidadeDeAlunos;
     }
 
@@ -46,21 +50,32 @@ private Turma turma;
     }
 
     public void setQuantidadeDeturmas(int quantidadeDeturmas) {
+
         this.quantidadeDeturmas = quantidadeDeturmas;
     }
 
-
-    public Turma getTurma() {
-        return turma;
+    public List<Turma> getTurmas() {
+        return turmas;
     }
 
-    public void setTurma(Turma turma) {
-        this.turma = turma;
+    public void setTurmas(List<Turma> turmas) {
+        this.turmas = turmas;
     }
 
     public void adicionaTurma(){
+
         this.quantidadeDeturmas;
 }
 
 
+private int calcularQuantidadeDeTurmas(List<Turma> turmas){
+        return turmas.size();
+}
+private  int calcularQuantidadeDeAlunos (List<Turma> turmas) {
+int quantidadeDealunos = 0;
+for (Turma t:turmas) {
+    quantidadeDealunos = quantidadeDeAlunos + t.getNumeroDeAlunos();
+}
+        return quantidadeDealunos;
+}
 }

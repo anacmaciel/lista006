@@ -1,6 +1,6 @@
 package partea;
 
-public abstract class FuncionarioUniversidade{
+public abstract class Funcionario {
     private String nome;
     private String cpf;
     private String numeroDeRegistro;
@@ -8,7 +8,7 @@ private String orgaoDeLotacao;
 private double salario;
 
 
-    public FuncionarioUniversidade(String nome, String cpf, String numeroDeRegistro, String orgaoDeLotacao, double salario) {
+    public Funcionario(String nome, String cpf, String numeroDeRegistro, String orgaoDeLotacao, double salario) {
         this.nome = nome;
         this.cpf = cpf;
         this.numeroDeRegistro = numeroDeRegistro;
@@ -49,6 +49,7 @@ private double salario;
     }
 
     public double getSalario() {
+
         return salario;
     }
 
@@ -58,7 +59,7 @@ private double salario;
 
 public double aumentoSalario(){
 
-        return salario * 0.10;
+        return salario * 1.10;
 }
 
 
