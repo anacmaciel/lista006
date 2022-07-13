@@ -1,10 +1,29 @@
-public class Quadrado extends Figura{
-    public Quadrado (double cumprimento, double base, double altura) {
-        super(cumprimento, base, altura);
+package partb;
+
+public class Quadrado implements FiguraGeometrica {
+
+    private double lado;
+
+    public Quadrado(double lado) {
+
+        this.lado = lado;
     }
 
-    public double  calcularArea(double lado) {
+
+    public double getLado() {
+        return lado;
+    }
+
+    public void setLado(double lado) {
+        this.lado = lado;
+    }
+
+    public double  calcularArea() {
 
         return lado * lado;
+    }
+
+    public double calcularPerimetro() {
+        return 4 * lado;
     }
 }
