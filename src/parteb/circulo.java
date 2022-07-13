@@ -1,15 +1,14 @@
 package parteb;
 
 
-    public class Circulo implements FiguraGeometrica{
+    public class Circulo extends Figura implements  FiguraGeometrica{
 
 private  double raio;
 
-
-        public Circulo(double raio) {
+        public Circulo(double area, double perimetro, double raio) {
+            super(area, perimetro);
             this.raio = raio;
         }
-
 
         public double getRaio() {
             return raio;
@@ -19,9 +18,9 @@ private  double raio;
             this.raio = raio;
         }
 
-        public double calcularArea(double diametro) {
-             diametro= 3.14 * raio * raio;
-            return diametro;
+        public double calcularArea() {
+
+            return 3.14 * raio * raio;
         }
 
 public  double calcularPerimetro() {
