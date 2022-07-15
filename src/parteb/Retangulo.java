@@ -2,14 +2,12 @@ package parteb;
 
 
 
-public class Retangulo extends Figura implements FiguraGeometrica{
+public class Retangulo implements FiguraGeometrica{
 
  private double altura;
 private double base;
 
-
-    public Retangulo(double area, double perimetro, double altura, double base) {
-        super(area, perimetro);
+    public Retangulo(double altura, double base) {
         this.altura = altura;
         this.base = base;
     }

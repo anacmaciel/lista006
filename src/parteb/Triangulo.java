@@ -1,13 +1,12 @@
 package parteb;
 
-public class Triangulo extends Figura implements FiguraGeometrica{
+public class Triangulo implements FiguraGeometrica{
 
     private double ladoA;
     private double ladoB;
     private double ladoC;
 
-    public Triangulo(double area, double perimetro, double ladoA, double ladoB, double ladoC) {
-        super(area, perimetro);
+    public Triangulo(double ladoA, double ladoB, double ladoC) {
         this.ladoA = ladoA;
         this.ladoB = ladoB;
         this.ladoC = ladoC;

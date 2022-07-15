@@ -1,14 +1,10 @@
-package partb;
+package parteb;
 
-import parteb.Figura;
-import parteb.FiguraGeometrica;
-
-public class Quadrado extends Figura  implements FiguraGeometrica {
+public class Quadrado implements FiguraGeometrica {
 
     private double lado;
 
-    public Quadrado(double area, double perimetro, double lado) {
-        super(area, perimetro);
+    public Quadrado(double lado) {
         this.lado = lado;
     }
 
