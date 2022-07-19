@@ -19,6 +19,12 @@ private List <Turma> turmas;
         this.turmas = turmas;
     }
 
+
+    public void adicionaTurma(){
+
+        this.quantidadeDeturmas;
+    }
+
     public String getNivelDeGraduacao() {
         return nivelDeGraduacao;
     }
@@ -62,16 +68,10 @@ private List <Turma> turmas;
         this.turmas = turmas;
     }
 
-    public void adicionaTurma(){
-
-        this.quantidadeDeturmas;
-}
-
-
-private int calcularQuantidadeDeTurmas(List<Turma> turmas){
+public int calcularQuantidadeDeTurmas(List<Turma> turmas){
         return turmas.size();
 }
-private  int calcularQuantidadeDeAlunos (List<Turma> turmas) {
+public   int calcularQuantidadeDeAlunos (List<Turma> turmas) {
 int quantidadeDealunos = 0;
 for (Turma t:turmas) {
     quantidadeDealunos = quantidadeDeAlunos + t.getNumeroDeAlunos();

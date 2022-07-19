@@ -16,6 +16,12 @@ private double salario;
         this.salario = salario;
     }
 
+
+    public double aumentoSalario(){
+
+        return salario * 1.10;
+    }
+
     public String getNome() {
         return nome;
     }
@@ -53,14 +59,9 @@ private double salario;
         return salario;
     }
 
-    public void setSalario(String salario) {
+    public void setSalario(double salario) {
         this.salario = salario;
     }
-
-public double aumentoSalario(){
-
-        return salario * 1.10;
-}
 
 
 }
