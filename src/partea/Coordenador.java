@@ -18,10 +18,10 @@ private int limiteSupervisionados = 5;
 if (professor.size() <= limiteSupervisionados) {
 
     professores.add(p);
-    return professor adicionado com sucesso;
+    return "Professor adicionado com sucesso";
 } else  {
 
-  return  A lista já atingiu o limite máximo;
+  return "A lista já atingiu o limite máximo";
 }
 
 
@@ -33,4 +33,4 @@ if (professor.size() <= limiteSupervisionados) {
         return getSalario() * 1.5;
     }
 
-}
+    }
