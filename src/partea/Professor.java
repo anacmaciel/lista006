@@ -1,14 +1,15 @@
 package partea;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Professor extends Funcionario {
-     private String nivelDeGraduacao;
-private String disciplinaMinistrada;
-private int quantidadeDeAlunos;
-private int quantidadeDeturmas;
-private List <Turma> turmas;
-
+    private String nivelDeGraduacao;
+    private String disciplinaMinistrada;
+    private int quantidadeDeAlunos;
+    private int quantidadeDeturmas;
+    private List<Turma> listaDeTurmas;
+    private List<Estagiario> listaDeEstagiarios;
 
     public Professor(String nome, String cpf, String numeroDeRegistro, String orgaoDeLotacao, double salario, String nivelDeGraduacao, String disciplinaMinistrada, List<Turma> turmas) {
         super(nome, cpf, numeroDeRegistro, orgaoDeLotacao, salario);
@@ -19,17 +20,22 @@ private List <Turma> turmas;
         this.turmas = turmas;
     }
 
+    public void adicionaTurma() {
+        listaDeTurmas.add();
+    }
 
-    public void adicionaTurma(){
-
-        this.quantidadeDeturmas;
+    public void adicionaEstagiario() {
+        if (listaDeEstagiarios.size( < 3)){
+           //Lógica não concluída System.out.println("Insira os dados do estagiário");
+            listaDeEstagiarios.add();
+        }
     }
 
     public String getNivelDeGraduacao() {
         return nivelDeGraduacao;
     }
 
-    public void setNivelDeGraduacao(String nivelDeGraduacao){
+    public void setNivelDeGraduacao(String nivelDeGraduacao) {
 
         this.nivelDeGraduacao = nivelDeGraduacao;
     }
@@ -46,7 +52,7 @@ private List <Turma> turmas;
         return quantidadeDeAlunos;
     }
 
-    public void setQuantidadeDeAlunos(int quantidadeDeAlunos){
+    public void setQuantidadeDeAlunos(int quantidadeDeAlunos) {
 
         this.quantidadeDeAlunos = quantidadeDeAlunos;
     }
@@ -68,14 +74,15 @@ private List <Turma> turmas;
         this.turmas = turmas;
     }
 
-public int calcularQuantidadeDeTurmas(List<Turma> turmas){
+    public int calcularQuantidadeDeTurmas(List<Turma> turmas) {
         return turmas.size();
-}
-public   int calcularQuantidadeDeAlunos (List<Turma> turmas) {
-int quantidadeDealunos = 0;
-for (Turma t:turmas) {
-    quantidadeDealunos = quantidadeDeAlunos + t.getNumeroDeAlunos();
-}
+    }
+
+    public int calcularQuantidadeDeAlunos(List<Turma> turmas) {
+        int quantidadeDealunos = 0;
+        for (Turma t : turmas) {
+            quantidadeDealunos = quantidadeDeAlunos + t.getNumeroDeAlunos();
+        }
         return quantidadeDealunos;
-}
+    }
 }

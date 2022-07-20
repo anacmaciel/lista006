@@ -5,15 +5,20 @@ import java.util.List;
 
 public class MainUniversidade {
     public static void main(String[] args) {
+        List<Professor> listaDeProfessores = new ArrayList<>();
+        List<Estagiario> listaDeEstagiario = new ArrayList<>();
+        List<Turma> listaDeTurmas = new ArrayList<>();
+        Professor professor = new Professor();
+Coordenador coordenador = new Coordenador();
+Estagiario estagiario = new Estagiario();
 
 
-        List listaDeTurmas = new ArrayList<Turma>();
-        listaDeTurmas.add(new Turma(turma1));
+coordenador.adicionaProfessor();
+professor.adicionaTurma();
+professor.adicionaEstagiario();
 
-Professor professor = new Professor("José Silva", "000", "226", "ILC", 5000.00, "Superior", "física", );
 
     }
-
 
 
 }

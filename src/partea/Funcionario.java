@@ -1,11 +1,11 @@
 package partea;
 
-public abstract class Funcionario {
+public abstract class Funcionario implements Despesas {
     private String nome;
     private String cpf;
     private String numeroDeRegistro;
-private String orgaoDeLotacao;
-private double salario;
+    private String orgaoDeLotacao;
+    private double salario;
 
 
     public Funcionario(String nome, String cpf, String numeroDeRegistro, String orgaoDeLotacao, double salario) {
@@ -17,9 +17,14 @@ private double salario;
     }
 
 
-    public double aumentoSalario(){
+    public double aumentoSalario() {
 
         return salario * 1.10;
+    }
+
+    @Override
+    public void reembolsoDespesas() {
+        System.out.println("Reembolso com despesas do funcionário foi de: R$ ****");
     }
 
     public String getNome() {
