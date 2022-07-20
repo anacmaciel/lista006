@@ -15,8 +15,8 @@ public class Professor extends Funcionario {
         super(nome, cpf, numeroDeRegistro, orgaoDeLotacao, salario);
         this.nivelDeGraduacao = nivelDeGraduacao;
         this.disciplinaMinistrada = disciplinaMinistrada;
-        this.quantidadeDeAlunos = calcularQuantidadeDeAlunos(turmas);
-        this.quantidadeDeturmas = calcularQuantidadeDeTurmas(turmas);
+        this.quantidadeDeAlunos = quantidadeDeAlunos;
+        this.quantidadeDeturmas = quantidadeDeTurmas;
         this.turmas = turmas;
     }
 
@@ -80,9 +80,10 @@ public class Professor extends Funcionario {
 
     public int calcularQuantidadeDeAlunos(List<Turma> turmas) {
         int quantidadeDealunos = 0;
-        for (Turma t : turmas) {
+        for (int i = 0; i < listaDeTurmas.size(); i++) {
             quantidadeDealunos = quantidadeDeAlunos + t.getNumeroDeAlunos();
-        }
+
+            System.out.println(quantidadeDealunos);}
         return quantidadeDealunos;
     }
 }
